@@ -1,0 +1,7 @@
+useDynLib(QuantileDSPM, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+## export all regularly named functions
+## (but allow for private functions whose name starts with a dot).name <- function(...)
+exportPattern("^[[:alpha:]]+")
+importFrom("stats", "optim", "lm", "predict", "quantile", "IQR", "dnorm", "qnorm", "rbinom", "rexp", "rnorm", "sd")
+importFrom("quantreg", "rq")
